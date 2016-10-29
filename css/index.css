@@ -363,6 +363,7 @@ html, body {
     width: 0.56rem;;
     height: 0.61rem;
     background: url("../imgs/clock.png") no-repeat;
+    background-size:100% 100%; 
 }
 
 .slide3 .clock li:nth-child(2) {

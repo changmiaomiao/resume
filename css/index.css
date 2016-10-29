@@ -1,0 +1,627 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    overflow: hidden;
+    font-family: "Arial", "宋体", "微软雅黑";
+}
+
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#main, .swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    position: relative;
+}
+
+.top {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 48%;
+    top: auto;
+    z-index: 5;
+    width: 0.2rem;
+    height: 0.3rem;
+    background: url("../imgs/arrow2.png") no-repeat;
+    transform: rotate(-90deg);
+    -webkit-animation: move 1s infinite both;
+    animation: move 1s infinite both;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-wrapper .slide1 {
+    /* position: relative;*/
+    background: url("../imgs/wallpager.jpg") no-repeat;
+    background-size: cover;
+}
+
+.slide1 .home-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8rem;
+    opacity: 1;
+}
+
+.slide1 .home-top img {
+    margin-left: 0.05rem;
+    width: 0.93rem;
+    height: 0.74rem;
+
+}
+
+.slide1 .home-middle {
+    position: absolute;
+    left: 0.2rem;
+    top: 0.9rem;
+    width: 2.7rem;
+    height: 3.5rem;
+}
+
+.slide1 .home-middle img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+}
+
+.slide1 .home-middle img:nth-child(2) {
+    position: absolute;
+    top: 0.9rem;
+    left: 0.9rem;
+    width: 1rem;
+    height: 0.41rem;
+}
+
+.slide1 .myInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.2rem;
+}
+
+.slide1 .myInfo p {
+    width: .4rem;
+    height: .4rem;
+    background: url("../imgs/images.png") no-repeat;
+    background-size: cover;
+}
+
+.slide1 .myInfo p:nth-child(1) {
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+}
+
+.slide1 .myInfo div:nth-child(2) {
+    margin-top: 0.03rem;
+    text-align: center;
+}
+
+.slide1 .myInfo p:nth-child(3) {
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+}
+
+.slide1 .myInfo span {
+    font-size: 0.30rem;
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, yellowgreen, blue, purple);
+    background: linear-gradient(left, red, orange, yellow, green, yellowgreen, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+#page1 .home-top {
+    -webkit-animation: moveHome-top 1s 0s both;
+    -moz-animation: moveHome-top 1s 0s both;
+    -ms-animation: moveHome-top 1s 0s both;
+    -o-animation: moveHome-top 1s 0s both;
+    animation: moveHome-top 1s 0s both;
+}
+
+/*.slide1 .home-top {
+    -webkit-animation:bounceInLeft 2s 0s both;
+    animation:bounceInLeft 2s 0s both;
+}*/
+#page1 .home-middle img:nth-child(1) {
+    -webkit-animation: fadeInUp 1s 0s both;
+    -moz-animation: fadeInUp 1s 0s both;
+    -ms-animation: fadeInUp 1s 0s both;
+    -o-animation: fadeInUp 1s 0s both;
+    animation: fadeInUp 1s 0s both;
+}
+
+#page1 .myInfo div span:nth-child(1) {
+    -webkit-animation: flipInX 2s 0s 2 both;
+    -moz-animation: flipInX 2s 0s 2 both;
+    -ms-animation: flipInX 2s 0s 2 both;
+    -o-animation: flipInX 2s 0s 2 both;
+    animation: flipInX 2s 0s 2 both;
+}
+
+#page1 .myInfo div span:nth-child(3) {
+    -webkit-animation: rollIn 1s 1s 2 linear both;
+    -moz-animation: rollIn 1s 1s 2 linear both;
+    -ms-animation: rollIn 1s 1s 2 linear both;
+    -o-animation: rollIn 1s 1s 2 linear both;
+    animation: rollIn 1s 1s 2 linear both;
+}
+
+#page1 .myInfo p, .musicMove, #page2 div:nth-child(1) img {
+    -webkit-animation: revolve 0.6s infinite linear both;
+    -o-animation: revolve 0.6s infinite linear both;
+    animation: revolve 0.6s infinite linear both;
+}
+
+.music {
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    z-index: 111;
+    background: url(../audio/music.svg) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+/*首页结束*/
+.swiper-wrapper .slide2 {
+    /*position: relative;*/
+    background: url("../imgs/background2.jpg");
+    background-size: 100% 100%;
+}
+
+.slide2 div {
+    width: 1rem;
+    height: 1rem;
+}
+
+.slide2 div img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide2 div.infoTop {
+    position: relative;
+}
+
+.slide2 div.infoTop span {
+    position: absolute;
+    font-size: 0.20rem;
+    left: 0.12rem;
+    top: 0.4rem;
+}
+
+.slide2 div.line {
+    position: relative;
+    float: left;
+    margin-left: 0.2rem;
+    width: 0.03rem;
+    height: 0;
+    /*height: 3.43rem;*/
+    background: -webkit-linear-gradient(top, palevioletred, hotpink, purple);
+    background: linear-gradient(to bottom, palevioletred, hotpink, purple);
+}
+
+#page2:hover div.line {
+    height: 3.43rem;
+    transition: height 5s linear 0s;
+}
+
+.slide2 div.line span {
+    position: absolute;
+    left: -0.04rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    background-color: peru;
+}
+
+.slide2 div.line span:nth-child(1) {
+    top: 0;
+}
+
+.slide2 div.line span:nth-child(2) {
+    top: 33%;
+}
+
+.slide2 div.line span:nth-child(3) {
+    top: 67%;
+}
+
+.slide2 div.line span:nth-child(4) {
+    bottom: 0;
+}
+
+.slide2 div.content {
+    float: left;
+    position: absolute;
+    top: 1.2rem;
+    left: 0.5rem;
+    width: 2.4rem;
+    height: 0.24rem;
+}
+
+.slide2 div.content p {
+    width: 0;
+    font-size: 0rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    color: #eee;
+}
+
+#page2:hover div.content p {
+    width: 100%;
+    color: palevioletred;
+    transition: width, color 5s linear 1s;
+}
+
+#page2:hover div.content p:nth-child(1) {
+    font-size: 0.18rem;
+    transition: font-size 1s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(2) {
+    font-size: 0.18rem;
+    transition: font-size 1.5s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(3) {
+    font-size: 0.18rem;
+    transition: font-size 2s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(4) {
+    font-size: 0.18rem;
+    transition: font-size 2.5s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(5) {
+    font-size: 0.18rem;
+    transition: font-size 3s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(6) {
+    font-size: 0.18rem;
+    transition: font-size 3.5s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(7) {
+    font-size: 0.18rem;
+    transition: font-size 4s linear 0s;
+}
+
+#page2:hover div.content p:nth-child(8) {
+    font-size: 0.18rem;
+    transition: font-size 4.5s linear 0s;
+}
+
+.slide2 .infoBottom {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.slide2 .infoBottom span {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.2rem;
+    font-size: 0.16rem;
+    color: green;
+    font-weight: bold;
+}
+
+#page2 div.infoTop span {
+    -webkit-animation: swing 1s 2 both;
+    animation: swing 1s 2 both;
+}
+
+#page2 .infoBottom {
+    -webkit-animation: shake 1s 1 both;
+    animation: shake 1s 1 both;
+}
+
+/*个人信息结束*/
+.slide3 {
+    background: url("../imgs/sea.jpg");
+    background-size: cover;
+}
+
+.slide3 .clock {
+    position: relative;
+    width: 100%;
+}
+
+.slide3 .clock li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.3rem;;
+    height: 0.26rem;
+    background: url("../imgs/line.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.slide3 .clock li:nth-child(1) {
+    top: 0.3rem;
+    left: 0.6rem;
+    width: 0.56rem;;
+    height: 0.61rem;
+    background: url("../imgs/clock.png") no-repeat;
+}
+
+.slide3 .clock li:nth-child(2) {
+    top: 0.7rem;
+    left: 0.2rem;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.slide3 .clock li:nth-child(3) {
+    top: 0.94rem;
+    left: 0.65rem;
+}
+
+.slide3 .clock li:nth-child(4) {
+    top: 1.18rem;
+    left: 0.2rem;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.slide3 h3 {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.5rem;
+    font-size: 0.24rem;
+    font-weight: 900;
+    line-height: 0.35rem;
+}
+
+.slide3 > p {
+    position: absolute;
+    left: 0.2rem;
+    top: 1.6rem;
+}
+
+.slide3 .motto {
+    width: 0.05rem;
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+}
+
+.slide3 .mottoCon {
+    width: 0.03rem;
+    line-height: 0.20rem;
+    left: 0.4rem;
+    top: 1.7rem;
+    font-size: 0.15rem;
+}
+
+.slide3 .hobby {
+    position: absolute;
+    top: 2.2rem;
+    left: 0.6rem;
+    font-size: 0.15rem;
+    width: 1rem;
+    height: 1.4rem;
+    color: #999;
+}
+
+.slide3 .hobby li {
+    width: 100%;
+    height: 20%;
+}
+
+.slide3 img {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.slide3 .fineFood {
+    top: 1.6rem;
+    right: 1.2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.slide3 .birdNest {
+    top: 2.7rem;
+    right: 0.2rem;
+    width: 1.2rem;
+    height: 1rem;
+}
+
+.slide3 .lookBook {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+#page3 p.mottoCon {
+    -webkit-animation: rubberBand 1s 0s 2 both;
+    animation: rubberBand 1s 0s 2 both;
+}
+
+#page3 .birdNest {
+    -webkit-animation: fadeInRight 1s 1s 1 both;
+    animation: fadeInRight 1s 1s 1 both;
+}
+
+#page3 .lookBook {
+    -webkit-animation: fadeInDown 1s 2s 1 both;
+    animation: fadeInDown 1s 2s 1 both;
+}
+
+#page3 .fineFood {
+    -webkit-animation: roll 1s 1 both;
+    animation: roll 1s 1 both;
+    transition: 2s;
+}
+
+/*个人爱好结束*/
+.slide4 {
+    background: url("../imgs/background444.jpg") no-repeat;
+    background-size: cover;
+}
+
+.slide4 div.doDot {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.slide4 div.doDot p {
+    width: 100%;
+    font-size: 0.24rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+}
+
+.slide4 div.no u {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 0.24rem;
+    text-decoration: line-through;
+}
+
+#page4 div.doDot p {
+    -webkit-animation: flipInX 1s 2 1s both;
+    animation: flipInX 1s 2 1s both;
+}
+
+#page4 div.no u:nth-child(1) {
+    -webkit-animation: scale 1s 1 both;
+    animation: scale 1s 1 both;
+    -webkit-transition-timing-function({"ease":".25,.1,.25,1","linear":"0,0,1,1","ease-in":".42,0,1,1","ease-out":"0,0,.58,1","ease-in-out":".42,0,.58,1"} );
+    transition-timing-function({"ease":".25,.1,.25,1","linear":"0,0,1,1","ease-in":".42,0,1,1","ease-out":"0,0,.58,1","ease-in-out":".42,0,.58,1"}) ;
+}
+
+#page4 div.no u:nth-child(2) {
+    font-size: 0.3rem
+}
+
+#page4 div.no u:nth-child(3) {
+    font-size: 0.3rem
+}
+
+#page4 div.no u:nth-child(4) {
+    font-size: 0.3rem
+}
+
+#page4 div.no u:nth-child(5) {
+    font-size: 0.3rem
+}
+
+@keyframes scale {
+    0% {
+        top:0.3rem;
+        left:0.3rem;
+        opacity: 0;
+        font-size: 0;
+    }
+    25% {
+        top:0.3rem;
+        left:0.3rem;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        font-size: 0.3rem;
+    }
+}
+
+@keyframes roll {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        right: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        right: 1.2rem;
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+
+}
+
+@keyframes move {
+    0% {
+        opacity: 0.2;
+        bottom: 0.2rem
+    }
+    100% {
+        opacity: 1;
+        bottom: 0.3rem
+    }
+}
+
+@keyframes revolve {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveHome-top {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes moveHome-middle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -47,4 +47,46 @@ music.addEventListener("click", function () {
         play.pause();
         music.className = "music";
     }
-})
+});
+
+function getAngle(x1, y1, x2, y2) {
+    // 直角的边长
+    var x = Math.abs(x1 - x2);
+    var y = Math.abs(y1 - y2);
+    // 斜边长
+    var z = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    // 余弦
+    var cos = y / z;
+    // 弧度
+    var radina = Math.acos(cos);
+    // 角度
+    var angle =  180 / (Math.PI / radina);
+    return angle;
+}
+var x=document.documentElement.clientWidth;
+var y=document.documentElement.clientHeight;
+var render=(function(){
+    var line1=document.querySelector(".line1");
+    var line2=document.querySelector(".line2");
+    var angle = getAngle(0, 0, x, y);
+    line1.style.transform="rotate("+angle+"deg)";
+    //line1.style.animation="line1 1s 1 both;";
+    //line1.style.transition="1s";
+    line2.style.transform="rotate("+angle+"deg)";
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

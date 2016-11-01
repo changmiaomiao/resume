@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script>
         document.documentElement.style.fontSize = document.documentElement.offsetWidth / 640 * 100 + "px";
-        console.log(document.documentElement.style.fontSize);
+        console.dir(document.documentElement);
 
     </script>
 </head>
 <body>
 <div id="main">
     <div class="music" >
-        <audio src="audio/Cymophane.mp3" loop  preload="none" id="play"></audio>
+        <audio src="audio/happy.mp3" loop  preload="none" id="play"></audio>
     </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="home-middle">
                     <img src="imgs/lamp.png" alt=""/>
-                    <img src="imgs/resume.png" alt=""/>
+                    <img src="imgs/resume1.png" alt=""/>
                 </div>
                 <div class="myInfo">
                     <p></p>
@@ -103,24 +103,57 @@
                 <p class="line2"></p>
                 <div class="circle">
                     <div class="doDot">
-                        <p>别以为就这些</p>
-                        <p>后面还要内容呢!</p>
+                        <div class="doDot1">
+                            <p>别以为就这些</p>
+                        </div>
+                        <div class="doDot2">
+                            <p>后面还要内容呢!</p>
+                        </div>
                     </div>
-                    <div class="circle1 "></div>
-                    <div class="circle2"></div>
+                    <!--<div class="circle1 "></div>-->
+                    <!--<div class="circle2"></div>-->
                     <div class="circleBorder"></div>
                 </div>
             </div>
             <!--技能-->
-            <div class="swiper-slide slide5"></div>
-            <div class="swiper-slide slide6"></div>
-            <div class="swiper-slide slide7"></div>
-            <div class="swiper-slide slide8"></div>
+            <div class="swiper-slide slide5">
+                <h3 class="skill"><img src="imgs/skill.png" alt=""/>常苗苗的技能墙</h3>
+                <ul class="skills">
+                    <li>HTML <span></span></li>
+                    <li>JS<span></span></li>
+                    <li>PS<span></span></li>
+                    <li>NODE<span></span></li>
+                    <li>Al<span></span></li>
+                    <li>JQ<span></span></li>
+                </ul>
+                <div class="des">
+                    <img src="imgs/pen.png" alt=""/>
+                    <div class="fonts">
+                        <p>分析能力强</p>
+                        <p>技术热情,做事认真</p>
+                        <p>学习能力,总结能力强</p>
+                    </div>
+
+                </div>
+            </div>
+            <!--结尾-->
+            <div class="swiper-slide slide6">
+                <div class="ewm">
+                    <img src="imgs/ewm.png" alt=""/>
+                    <div class="fonts">
+                            <h2>请联系我～</h2>
+                            <p>微信:我认识妞妞</p>
+                            <p>QQ:940424841</p>
+                            <p>联系方式:18612047479</p>
+                            <p>邮箱:940424841@qq.com</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="top"></div>
 </div>
-
 </body>
 </html>
 <script src="js/swiper.min.js"></script>

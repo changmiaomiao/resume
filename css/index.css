@@ -6,11 +6,13 @@ html, body {
     overflow: hidden;
     font-family: "Arial", "宋体", "微软雅黑";
 }
-
-.clear:after {
-    display: block;
-    content: "";
-    clear: both;
+@media all and (min-device-width: 800px) and (max-width:1024px){
+    html,body{
+        margin: 0 auto;
+        width:65px;
+        height: 100px;
+        font-size: 10px;
+    }
 }
 
 #main, .swiper-container, .swiper-wrapper, .swiper-slide {
@@ -497,8 +499,8 @@ html, body {
 }
 
 #page4 .line1, #page4 .line2 {
-    -webkit-animation: line1 10s 0s 1 both;
-    animation: line1 10s 0s 1 both;
+    -webkit-animation: line1 5s 0s 1 both;
+    animation: line1 5s 0s 1 both;
 }
 
 .slide4 .line2 {
@@ -537,20 +539,19 @@ html, body {
     width: 50%;
     height: 2rem;
     background: url("../imgs/lamp2.png") no-repeat;
-
+    background-size: 100% 100%;
 }
 
 #page4 .circle {
     border-radius: 50%;
-    /*border: 0.04rem solid #FFFFFF;*/
-    -webkit-animation: downLod 1s 2s 1 both;
-    animation: downLod 1s 2s 1 both;
+    -webkit-animation: downLod 1.5s 1s 1 both;
+    animation: downLod 1.5s 1s 1 both;
 }
 
 @keyframes downLod {
     0% {
         opacity: 0;
-        top: -4.5rem;
+        top: -2.5rem;
     }
     50% {
         opacity: 1;
@@ -602,8 +603,8 @@ html, body {
 }
 
 #page4 div.doDot {
-    -webkit-animation: scale1 4s 6s 1 both;
-    animation: scale1 4s 6s 1 both;
+    -webkit-animation: scale1 3s 2s 1 both;
+    animation: scale1 3s 2s 1 both;
     /*transition: scale1 8s;*/
 }
 
@@ -912,9 +913,9 @@ html, body {
         opacity: 0;
         height: 2rem;
     }
-    50% {
+    40% {
         opacity: 1;
-        height: 6rem;
+        height: 7rem;
     }
     100% {
         opacity: 0;
@@ -1008,3 +1009,4 @@ html, body {
         opacity: 1;
     }
 }
+

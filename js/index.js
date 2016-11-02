@@ -21,7 +21,6 @@ var mySwiper = new Swiper(".swiper-container", {
                     default :
                         item.id = "page" + curIndex;
                 }
-
             }
         })
     },
@@ -70,14 +69,49 @@ var render=(function(){
     var line2=document.querySelector(".line2");
     var angle = getAngle(0, 0, x, y);
     line1.style.transform="rotate("+angle+"deg)";
-    //line1.style.animation="line1 1s 1 both;";
+    //line1.style.animation="line1 1s 1node both;";
     //line1.style.transition="1s";
     line2.style.transform="rotate("+angle+"deg)";
 })();
+var flower=(function(){
+    function ran(n,m){
+        return Math.round(Math.random()*(m-n)+n);
+    };
+    var flower=document.querySelector("#flowers"),
+        str="";
+    var widthDoc=document.documentElement.offsetWidth||document.body.offsetWidth,
+        heightDoc=document.documentElement.offsetHeight||document.body.offsetHeight;
+   function innerHtml(){
+       var n=ran(2,5);
+       for(var i=0;i<n;i++){
+           str+="<span></span>";
+       }
+       flower.innerHTML=str;
+       str="";
+   }
+    function move(){
+        var span=flower.querySelectorAll("span");
+        span.forEach(function(item,index){
+            item.className="flower"+ran(1,6);
+            with (item.style){
+                height=width=ran(40,60)+"px";
+                left=ran(0,widthDoc)+"px";
+                top=ran(1,30)+"px";
 
+            }
+        });
+    }
 
+    return {
+        init:function(){
+            innerHtml();
+            move();
 
-
+        }
+    }
+})();
+flower.init();
+timer=window.setInterval(flower.init,6000);
 
 
 

@@ -9,8 +9,8 @@ html, body {
 @media all and (min-device-width: 800px) and (max-width:1024px){
     html,body{
         margin: 0 auto;
-        width:65px;
-        height: 100px;
+        width:640px;
+        height: 1100px;
         font-size: 10px;
     }
 }
@@ -34,6 +34,7 @@ html, body {
     height: 0.4rem;
     background: url("../imgs/arrow2.png") no-repeat;
     background-size: 100% 100%;
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     -webkit-animation: move 1s infinite both;
     animation: move 1s infinite both;
@@ -176,7 +177,7 @@ html, body {
     position: absolute;
     top: 0.2rem;
     right: 0.2rem;
-    z-index: 11;
+    z-index: 20;
     background: url(../audio/music.svg) no-repeat;
     background-size: 100% 100%;
     opacity: 0;
@@ -271,46 +272,55 @@ html, body {
 #page2:hover div.content p {
     width: 100%;
     color: palevioletred;
+    -webkit-transition: width, color 5s linear 1s;
     transition: width, color 5s linear 1s;
 }
 
 #page2:hover div.content p:nth-child(1) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 1s linear 0s;
     transition: font-size 1s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(2) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 1.5s linear 0s;
     transition: font-size 1.5s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(3) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 2s linear 0s;
     transition: font-size 2s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(4) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 2.5s linear 0s;
     transition: font-size 2.5s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(5) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 3s linear 0s;
     transition: font-size 3s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(6) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 3.5s linear 0s;
     transition: font-size 3.5s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(7) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 4s linear 0s;
     transition: font-size 4s linear 0s;
 }
 
 #page2:hover div.content p:nth-child(8) {
     font-size: 0.36rem;
+    -webkit-transition: font-size 4.5s linear 0s;
     transition: font-size 4.5s linear 0s;
 }
 
@@ -495,6 +505,7 @@ html, body {
 .slide4 .line1 {
     left: 0;
     bottom: 0;
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
 }
 
@@ -506,6 +517,7 @@ html, body {
 .slide4 .line2 {
     right: 0;
     top: 0;
+    -webkit-transform-origin: top;
     transform-origin: top;
 }
 
@@ -622,7 +634,7 @@ html, body {
     animation: flipInX 1s 2 1s both;
 }
 
-/*#page4 div.no u:nth-child(1) {
+/*#page4 div.no u:nth-child(1node) {
     top: 0.6rem;
     left: 0.6rem;
 }*/
@@ -674,7 +686,7 @@ html, body {
 .slide5 .skills {
     position: absolute;
     left: 1.5rem;
-    top: 1.2rem;
+    top: 1rem;
     width: 4.5rem;
     height: 7.2rem;
 }
@@ -710,15 +722,15 @@ html, body {
 .slide5 .skills li:nth-child(1) {
     top: 0;
     left: 0;
- /*   background:-webkit-radial-gradient(farthest-corner at 1.5rem 1.5rem,#8b456a,#aa6876,#d19b83);
-    background:radial-gradient(farthest-corner at 1.5rem 1.5rem,#8b456a,#aa6876,#d19b83);*/
+ /*   background:-webkit-radial-gradient(farthest-corner at 1node.5rem 1node.5rem,#8b456a,#aa6876,#d19b83);
+    background:radial-gradient(farthest-corner at 1node.5rem 1node.5rem,#8b456a,#aa6876,#d19b83);*/
 }
 
 .slide5 .skills li:nth-child(2) {
     top: 0;
     left:0;
-    /*background:radial-gradient(farthest-corner at 1.5rem 1.5rem,#8b456a,#aa6876,#d19b83);
-    background:-webkit-radial-gradient(farthest-corner at 1.5rem 1.5rem,#89426c,#9f5b74,#9f5b74);*/
+    /*background:radial-gradient(farthest-corner at 1node.5rem 1node.5rem,#8b456a,#aa6876,#d19b83);
+    background:-webkit-radial-gradient(farthest-corner at 1node.5rem 1node.5rem,#89426c,#9f5b74,#9f5b74);*/
 }
 
 .slide5 .skills li:nth-child(3) {
@@ -752,13 +764,13 @@ html, body {
 
 .slide5 .des img {
     position: absolute;
-    bottom: 0.8rem;
-    left: 0.5rem;
+    top:9.2rem;
+    left: 0.8rem;
 }
 
 .slide5 .des .fonts {
     position: absolute;
-    bottom: 1rem;
+   top:9.2rem;
     left: 2rem;
 }
 
@@ -829,10 +841,11 @@ html, body {
     margin:0;
     width: 0;
     height: 0;
+    -webkit-transition: all 3s;
     transition: all 3s;
 }
 #page6 .ewm img{
-    margin:2rem auto 0.5rem;
+    margin:20% auto 0.5rem;
     width: 2rem;
     height: 2rem;
 }
@@ -845,10 +858,12 @@ html, body {
 .slide6 .ewm .fonts h2{
     /*color: ;*/
     font-size: 0.4rem;
+    -webkit-transition: all 3s 3s;
     transition: all 3s 3s;
 }
 .slide6 .ewm .fonts p{
     font-size: 0;
+    -webkit-transition: all 3s 4s;
     transition: all 3s 4s;
 }
 #page6 .ewm .fonts h2{
@@ -876,10 +891,12 @@ html, body {
 @keyframes skillMove3 {
     0% {
         opacity: 0;
+        -webkit-transform: translate(0, 0) rotate(-90deg);
         transform: translate(0, 0) rotate(-90deg);
     }
     100% {
         opacity: 1;
+        -webkit-transform: translate(-2.7rem, 2.6rem) rotate(0deg);
         transform: translate(-2.7rem, 2.6rem) rotate(0deg);
     }
 }
@@ -887,10 +904,12 @@ html, body {
 @keyframes skillMove2 {
     0% {
         opacity: 0;
+        -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg);
     }
     100% {
         opacity: 1;
+        -webkit-transform: translateX(2.7rem) rotate(0deg);
         transform: translateX(2.7rem) rotate(0deg);
     }
 }
@@ -899,11 +918,13 @@ html, body {
     0% {
         opacity: 0;
         font-size: 0;
+        -webkit-transform: scale(1);
         transform: scale(1);
     }
     100% {
         opacity: 1;
         font-size: 0.3rem;
+        -webkit-transform: scale(2);
         transform: scale(2);
     }
 }
@@ -1009,4 +1030,108 @@ html, body {
         opacity: 1;
     }
 }
+#flowers span{
+    position: absolute;
+    display: block;
+    top:0;
+    left:0;
+    opacity: 0;
+    z-index: 10;
+    background: url(../imgs/bubbleMin.png) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    -webkit-transform: translate(0);
+    transform: translate(0);
 
+}
+#flowers span.flower1{
+    -webkit-animation:flower1 10s 1s 1 both;
+    animation:flower1 10s 1s 1 both;
+}
+@keyframes flower1 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity:0;
+        -webkit-transform: translateX(-2rem) translateY(9rem);
+        transform: translateX(-2rem) translateY(9rem);
+    }
+}
+#flowers span.flower2{
+    -webkit-animation:flower2 14s 2s 1 both;
+    animation:flower2 14s 2s 1 both;
+}
+@keyframes flower2 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity: 0;
+        -webkit-transform: translateX(-3rem) translateY(10rem);
+        transform: translateX(-3rem) translateY(10rem);
+    }
+}
+#flowers span.flower3{
+    -webkit-animation:flower3 10s 1.5s 1 both;
+    animation:flower3 10s 1.5s 1 both;
+}
+@keyframes flower3 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity:0;
+        -webkit-transform: translateX(-5rem) translateY(11rem);
+        transform: translateX(-5rem) translateY(11rem);
+
+    }
+}
+#flowers span.flower4{
+    -webkit-animation:flower4 9s 1.5s  1 both;
+    animation:flower4 9s 1.5s 1 both;
+}
+@keyframes flower4 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity: 0;
+        -webkit-transform: translateX(-3rem) translateY(9rem);
+        transform: translateX(-3rem) translateY(9rem);
+    }
+}
+#flowers span.flower5{
+    -webkit-animation:flower5 12s 2.5s 1 both;
+    animation:flower5 12s 2.5s 1 both;
+}
+@keyframes flower5 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity:0;
+        -webkit-transform: translateX(-5rem) translateY(10rem);
+        transform: translateX(-5rem) translateY(10rem);
+    }
+}
+#flowers span.flower6{
+    -webkit-animation:flower6 8s 1 3s both;
+    animation:flower6 8s 1 both;
+}
+@keyframes flower6 {
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25%{opacity: 1}
+    100%{opacity: 0;
+        -webkit-transform: translateX(-2rem) translateY(8rem);
+        transform: translateX(-2rem) translateY(8rem);
+    }
+}

@@ -9,8 +9,8 @@ html, body {
 @media all and (min-device-width: 800px) and (max-width:1024px){
     html,body{
         margin: 0 auto;
-        width:640px;
-        height: 1100px;
+        width:360px;
+        height: 640px;
         font-size: 10px;
     }
 }
@@ -51,50 +51,54 @@ html, body {
 }
 
 .slide1 .home-top {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 1.6rem;
+    height: 15%;
     opacity: 1;
 }
 
 .slide1 .home-top img {
     margin-left: 0.1rem;
-    width: 1.6rem;
-    height: 1.44rem;
+    width: 30%;
+    height:100%;
 
 }
-
 .slide1 .home-middle {
-    position: absolute;
-    left: 0.4rem;
-    top: 1rem;
-    width: 5.4rem;
-    height: 7rem;
+    width: 100%;
+    height: 60%;
 }
-
-.slide1 .home-middle img:nth-child(1) {
+.slide1 .home-middle .resume{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 0.82rem;
+}
+.slide1 .home-middle .resume div{
+    margin:0 auto  ;
+     width: 2rem;
+     height:0.82rem;
+    background: url("../imgs/resume1.png");
+    background-size: 100% 100%;
+ }
+.slide1 .home-middle .lamp{
     width: 100%;
     height: 100%;
 }
-
-.slide1 .home-middle img:nth-child(2) {
-    position: absolute;
-    top: 1.8rem;
-    left: 1.8rem;
-    width: 2rem;
-    height: 0.82rem;
+.slide1 .home-middle .lamp div{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    background: url("../imgs/lamp.png") no-repeat ;
+    background-size: 100% 100%;
 }
-
 .slide1 .myInfo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 2.4rem;
+    height: 20%;
 }
-
+.slide1 .myInfo div{
+    text-align: center;
+}
 .slide1 .myInfo p {
     width: .8rem;
     height: .8rem;
@@ -105,24 +109,22 @@ html, body {
 .slide1 .myInfo p:nth-child(1) {
     position: absolute;
     left: 1rem;
-    top: 0;
+
 }
 
 .slide1 .myInfo div:nth-child(2) {
-    margin-top: 0.06rem;
     text-align: center;
 }
 
 .slide1 .myInfo p:nth-child(3) {
     position: absolute;
     right: 1rem;
-    top: 0;
 }
 
 .slide1 .myInfo span {
-    font-size: 0.60rem;
-    background: -webkit-linear-gradient(left, red, orange, yellow, green, yellowgreen, blue, purple);
-    background: linear-gradient(left, red, orange, yellow, green, yellowgreen, blue, purple);
+    font-size: 0.56rem;
+    background: -webkit-linear-gradient(left, red, orange, yellow, green);
+    background: linear-gradient(left, red, orange, yellow, green);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -141,7 +143,7 @@ html, body {
     -webkit-animation:bounceInLeft 2s 0s both;
     animation:bounceInLeft 2s 0s both;
 }*/
-#page1 .home-middle img:nth-child(1) {
+#page1 .home-middle .lamp {
     -webkit-animation: fadeInUp 1s 0s both;
     -moz-animation: fadeInUp 1s 0s both;
     -ms-animation: fadeInUp 1s 0s both;
@@ -224,6 +226,7 @@ html, body {
 
 #page2:hover div.line {
     height: 6.86rem;
+    -webkit-transition: height 5s linear 0s;
     transition: height 5s linear 0s;
 }
 
@@ -263,9 +266,8 @@ html, body {
 
 .slide2 div.content p {
     width: 0;
-    font-size: 0rem;
+    font-size: 0;
     height: 0.7rem;
-    line-height: 0.7rem;
     color: #eee;
 }
 
@@ -351,7 +353,7 @@ html, body {
 
 /*个人信息结束*/
 .slide3 {
-    background: url("../imgs/sea.jpg");
+    background: url("../imgs/background333.png");
     background-size: cover;
 }
 
@@ -456,7 +458,7 @@ html, body {
 }
 
 .slide3 .birdNest {
-    top: 5.4rem;
+    top: 5rem;
     right: 0.4rem;
     width: 2.4rem;
     height: 2rem;
@@ -464,9 +466,9 @@ html, body {
 
 .slide3 .lookBook {
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4rem;
+    right:0;
+    width: 70%;
+    height: 2.2rem;
 }
 
 #page3 .motto {
@@ -491,7 +493,7 @@ html, body {
 
 /*个人爱好结束*/
 .slide4 {
-    background: url("../imgs/background444.jpg") no-repeat;
+    background: url("../imgs/background4.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -520,42 +522,44 @@ html, body {
     -webkit-transform-origin: top;
     transform-origin: top;
 }
-
-.slide4 .circle {
-    position: absolute;
-    left: 1rem;
-    top: -4.5rem;
-    opacity: 0;
+.slide4 .lamp4{
+   width: 100%;
+    height: 2.3rem;
 }
-
-.slide4 .circle .circleBorder {
-    position: absolute;
-    left: -0.25rem;
-    top: -0.25rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    border: 0.15rem solid rgb(0, 178, 255);
-    border-radius: 50%;
-}
-
-.slide4 .circle .circle1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.slide4 .lamp4 {
-    position: absolute;
-    top: 0;
-    left: 2rem;
-    width: 50%;
+.slide4 .lamp4 .lampImg{
+    margin: 0 auto;
+    width: 45%;
     height: 2rem;
     background: url("../imgs/lamp2.png") no-repeat;
     background-size: 100% 100%;
 }
+.slide4 .margin{
+    position: relative;
+    margin: 0 auto;
+    width: 4.74rem;
+    height: 60%;
+}
 
-#page4 .circle {
+.slide4 .margin .circle {
+    position: relative;
+    left:0;
+    top:1.5rem;
+    width: 4.74rem;
+    height: 4.74rem;
+    opacity: 0;
     border-radius: 50%;
+}
+
+.slide4 .margin .circle .circleBorder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 0.12rem solid rgb(0, 178, 255);
+    border-radius: 50%;
+}
+#page4 .circle {
     -webkit-animation: downLod 1.5s 1s 1 both;
     animation: downLod 1.5s 1s 1 both;
 }
@@ -567,26 +571,26 @@ html, body {
     }
     50% {
         opacity: 1;
-        top: 3.4rem;
+        top: 1.6rem;
     }
     80% {
         opacity: 1;
-        top: 3rem;
+        top: 1rem;
     }
     100% {
         opacity: 1;
-        top: 3.2rem;
+        top:1.3rem;
     }
 }
 
 .slide4 div.doDot {
     position: absolute;
-    top: 1.1rem;
-    left: 1.1rem;
+    top: 1.37rem;
+    left: 1.37rem;
     width: 2rem;
     height: 2rem;
     /*font-size: 0.48rem;*/
-    opacity: 0;
+    opacity: 1;
     border-radius: 50%;
     background-color: rgb(0, 178, 255);
 }
@@ -594,6 +598,7 @@ html, body {
 .slide4 div.doDot .doDot1 {
     position: absolute;
     left: 0;
+    font-size: 36px;
     top: 0.4rem;
     width: 100%;
 }
@@ -601,6 +606,7 @@ html, body {
 .slide4 div.doDot .doDot2 {
     position: absolute;
     left: 0;
+    font-size: 0.36rem;
     top: 0.9rem;
     width: 100%;
 }
@@ -620,48 +626,11 @@ html, body {
     /*transition: scale1 8s;*/
 }
 
-.slide4 div.no u {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*opacity: 0;*/
-    font-size: 0.48rem;
-    text-decoration: none;
-}
-
 #page4 div.doDot p {
     -webkit-animation: flipInX 1s 2 1s both;
     animation: flipInX 1s 2 1s both;
 }
 
-/*#page4 div.no u:nth-child(1node) {
-    top: 0.6rem;
-    left: 0.6rem;
-}*/
-
-#page4 div.no u:nth-child(2) {
-    font-size: 0.6rem;
-    top: 1.2rem;
-    left: 1.2rem;
-}
-
-#page4 div.no u:nth-child(3) {
-    top: 4rem;
-    left: 1rem;
-    font-size: 0.6rem;
-}
-
-#page4 div.no u:nth-child(4) {
-    top: 4rem;
-    left: 2.4rem;
-    font-size: 0.6rem;
-}
-
-#page4 div.no u:nth-child(5) {
-    top: 4rem;
-    left: 4rem;
-    font-size: 1.6rem;
-}
 
 /*插话结束*/
 .slide5 {
@@ -764,8 +733,10 @@ html, body {
 
 .slide5 .des img {
     position: absolute;
+    width: 1rem;
+    height: 1rem;
     top:9.2rem;
-    left: 0.8rem;
+    left: 0.5rem;
 }
 
 .slide5 .des .fonts {

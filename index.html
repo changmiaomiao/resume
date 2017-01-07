@@ -12,8 +12,24 @@
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <script>
-        document.documentElement.style.fontSize = document.documentElement.offsetWidth / 740 * 100 + "px";
-        console.log(document.documentElement.offsetWidth);
+        (function (doc, win) {
+            var _root = doc.documentElement,
+                    resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    resizeCallback = function () {
+                        var clientWidth = _root.clientWidth,
+                                fontSize = 10 * 10;
+                        if (!clientWidth) return;
+                        if (clientWidth < 1080) {
+                            fontSize = 100 * (clientWidth / 750);
+                        } else {
+                            fontSize = 100 * (1080 / 750);
+                        }
+                        _root.style.fontSize = fontSize + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvent, resizeCallback, false);
+            doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+        })(document, window);
     </script>
 </head>
 <body>
@@ -162,7 +178,7 @@
                     <div class="fonts">
                         <h2>请联系我～</h2>
 
-                        <p>QQ:940424841</p>
+                        <a href="tencent://message/?uin=940424841" ><p>QQ:940424841(点击联系我)</p></a>
 
                         <p>微信:我认识妞妞</p>
 
